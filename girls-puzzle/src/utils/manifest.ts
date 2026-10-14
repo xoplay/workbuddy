@@ -5,6 +5,8 @@
  * 仅保留极薄兜底，避免共享库未就绪时图片 404。
  */
 
+import { assetUrl } from '../config/assets';
+
 type Tier = { id: string; path?: string; readableBy?: string[]; [k: string]: any };
 
 function xpImages(): any | null {
@@ -35,7 +37,8 @@ export function buildPathSync(tierId: string, n: number): string {
     if (p) return p;
   }
   // 兜底：扁平 tier 文件夹名 == prefix（a/b/c/d/e/f/g/v）
-  return `/img/${tierId}/${tierId}${pad5(n)}.webp`;
+  // 走 assetUrl 以带上部署 base（GitHub Pages 子路径等），否则子路径下会 404
+  return assetUrl(`img/${tierId}/${tierId}${pad5(n)}.webp`);
 }
 
 /** 某游戏允许读取的 tier 列表（manifest readableBy 包含该 gameId） */
