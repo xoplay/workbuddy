@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --color-vibrant-dark: #0a0a0a;
+  --color-vibrant-green: #22c55e;
+  --color-vibrant-magenta: #db2777;
+  --color-vibrant-gold: #fbbf24;
+  --color-vibrant-pearl: #f3f4f6;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-vibrant-dark);
+  color: #fff;
+  overflow: hidden;
+}
+
+/* Hide standard scrollbars for a console clean-room look */
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-none {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* Custom text shadows and styling for a premium look */
+.currency-chip {
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
+  letter-spacing: 0.05em;
+}
+
+@keyframes slow-breath {
+  0% { opacity: 0.5; }
+  100% { opacity: 0.9; }
+}
+
+.custom-breath-anim {
+  animation: slow-breath 4s ease-in-out infinite alternate;
+}
+
+@keyframes heartbeat-pulse {
+  0% { opacity: 0.3; }
+  10% { opacity: 1; }
+  35% { opacity: 1; }
+  100% { opacity: 0.3; }
+}
+
+.heartbeat-anim {
+  animation: heartbeat-pulse 2s ease-in-out infinite;
+}
+
