@@ -20,6 +20,7 @@ import { GuideOverlay } from './components/GuideOverlay';
 
 
 import { fxSystem } from './utils/fxSystem';
+import { assetUrl } from './config/assets';
 
 // 共享内联 SVG 图标（window.XPlay.XP_Icons）：统一视觉，零图片依赖
 type XpIconName = 'coin' | 'diamond' | 'star' | 'like' | 'home' | 'download' | 'back' | 'close' | 'ad';
@@ -770,7 +771,7 @@ export default function App() {
                             className="xp-icon-btn"
                           >
                             <div className={`flex items-center justify-center ${checkDailyFeaturesRedDot() ? 'heartbeat-anim' : ''}`}>
-                              <img src="/ui/icon_star.svg" alt="activity" />
+                              <img src={assetUrl('ui/icon_star.svg')} alt="activity" />
                             </div>
                           </button>
 
@@ -786,7 +787,7 @@ export default function App() {
                             id={`header-open-gallery-${line}`}
                             className="xp-icon-btn"
                           >
-                            <img src="/ui/icon_like.svg" alt="collect" />
+                            <img src={assetUrl('ui/icon_like.svg')} alt="collect" />
                           </button>
                         </div>
                       )}
@@ -844,7 +845,7 @@ export default function App() {
             onTouchStart={(e) => e.stopPropagation()}
             className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center rounded-full bg-black/35 text-white hover:bg-black/60 transition z-20 cursor-pointer hidden md:flex"
           >
-            <img src="/ui/icon_chevron_left.svg" alt="" className="w-6 h-6" />
+            <img src={assetUrl('ui/icon_chevron_left.svg')} alt="" className="w-6 h-6" />
           </button>
         )}
 
@@ -859,7 +860,7 @@ export default function App() {
             onTouchStart={(e) => e.stopPropagation()}
             className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center rounded-full bg-black/35 text-white hover:bg-black/60 transition z-20 cursor-pointer hidden md:flex"
           >
-            <img src="/ui/icon_chevron_right.svg" alt="" className="w-6 h-6" />
+            <img src={assetUrl('ui/icon_chevron_right.svg')} alt="" className="w-6 h-6" />
           </button>
         )}
       </div>
@@ -919,7 +920,7 @@ export default function App() {
             exit={{ opacity: 0, y: -40, scale: 0.95 }}
             className="fixed top-24 left-1/2 -translate-x-1/2 z-50 bg-neutral-900 border border-neutral-800 text-white py-2 px-4 rounded-full text-xs font-medium tracking-wide backdrop-blur-md flex items-center gap-1.5"
           >
-            <img src="/ui/icon_info.svg" alt="" className="w-4 h-4" />
+            <img src={assetUrl('ui/icon_info.svg')} alt="" className="w-4 h-4" />
             <span>{feedbackToast}</span>
           </motion.div>
         )}

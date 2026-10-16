@@ -608,7 +608,7 @@ export default function PuzzleBoard({
             id="settings-trigger-btn"
             className={`w-12 h-12 flex items-center justify-center rounded-full text-white shadow-none transition-colors duration-300 cursor-pointer relative top-0 left-0 ${settingsOpen ? 'bg-black/90' : 'bg-black/50'}`}
           >
-            <img src="/ui/icon_lightning.svg" alt="" className="w-6 h-6" />
+            <img src={assetUrl('ui/icon_lightning.svg')} alt="" className="w-6 h-6" />
             <div className={`absolute -top-1 -right-1 text-[10px] font-black px-1.5 py-0.5 rounded-full leading-none bg-white border-transparent ${
               stepsLeft === 3 ? 'text-orange-500' :
               stepsLeft === 2 ? 'text-red-500' :
@@ -634,28 +634,28 @@ export default function PuzzleBoard({
                   onClick={onGiveUp}
                   className="w-10 h-10 flex items-center justify-center rounded-full hover:bg-white/10 text-white transition cursor-pointer"
                 >
-                  <img src="/ui/icon_home.svg" alt="" className="w-5 h-5" />
+                  <img src={assetUrl('ui/icon_home.svg')} alt="" className="w-5 h-5" />
                 </button>
 
                 <button
                   onClick={() => setSettings((p) => ({ ...p, soundEnabled: !p.soundEnabled }))}
                   className="w-10 h-10 flex items-center justify-center rounded-full hover:bg-white/10 transition cursor-pointer"
                 >
-                  <img src="/ui/icon_sound.svg" alt="" className={`w-5 h-5 transition-opacity ${settings.soundEnabled ? 'opacity-100' : 'opacity-20'}`} />
+                  <img src={assetUrl('ui/icon_sound.svg')} alt="" className={`w-5 h-5 transition-opacity ${settings.soundEnabled ? 'opacity-100' : 'opacity-20'}`} />
                 </button>
 
                 <button
                   onClick={() => setSettings((p) => ({ ...p, musicEnabled: !p.musicEnabled }))}
                   className="w-10 h-10 flex items-center justify-center rounded-full hover:bg-white/10 transition cursor-pointer"
                 >
-                  <img src="/ui/icon_music.svg" alt="" className={`w-5 h-5 transition-opacity ${settings.musicEnabled ? 'opacity-100' : 'opacity-20'}`} />
+                  <img src={assetUrl('ui/icon_music.svg')} alt="" className={`w-5 h-5 transition-opacity ${settings.musicEnabled ? 'opacity-100' : 'opacity-20'}`} />
                 </button>
 
                 <button
                   onClick={() => setSettings((p) => ({ ...p, vibrationEnabled: !p.vibrationEnabled }))}
                   className="w-10 h-10 flex items-center justify-center rounded-full hover:bg-white/10 transition cursor-pointer"
                 >
-                  <img src="/ui/icon_shake.svg" alt="" className={`w-5 h-5 transition-opacity ${settings.vibrationEnabled ? 'opacity-100' : 'opacity-20'}`} />
+                  <img src={assetUrl('ui/icon_shake.svg')} alt="" className={`w-5 h-5 transition-opacity ${settings.vibrationEnabled ? 'opacity-100' : 'opacity-20'}`} />
                 </button>
 
                 <div className="w-[1px] h-6 bg-white/20 shrink-0 mx-1" />
@@ -696,7 +696,7 @@ export default function PuzzleBoard({
                 className="bg-neutral-900 border border-neutral-800 rounded-3xl p-6 w-full max-w-[280px] text-center relative"
               >
                 <div className="w-12 h-12 rounded-full bg-amber-500/10 flex items-center justify-center mx-auto mb-4 border border-amber-500/20">
-                  <img src="/ui/icon_lightning.svg" alt="" className="w-5 h-5" />
+                  <img src={assetUrl('ui/icon_lightning.svg')} alt="" className="w-5 h-5" />
                 </div>
 
                 <h3 className="text-xs uppercase tracking-widest text-neutral-400 font-semibold mb-2">energy spent</h3>
