@@ -15,6 +15,11 @@ GitHub Pages（推送 `main` 自动部署，见 [`.github/workflows/deploy-pages
 - 项目索引：https://xoplay.github.io/workbuddy/
 - Girls Puzzle：https://xoplay.github.io/workbuddy/girls-puzzle/
 
+## 协作
+
+沙箱内 GitHub 凭证见 [docs/github-auth.md](./docs/github-auth.md)（需要的 scopes、两种恢复方式、已知坑）。
+新会话（新沙箱）需重新授权一次。
+
 ## girls-puzzle
 
 经典拼图：交换图块复原图片，含关卡线、收藏、商城、每日挑战。
