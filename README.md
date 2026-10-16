@@ -8,6 +8,13 @@ WorkBuddy 项目仓库。
 |------|------|------|
 | [`girls-puzzle/`](./girls-puzzle) | Girls Puzzle 拼图游戏（React + TS + Tailwind v4） | 可运行 |
 
+## 在线预览
+
+GitHub Pages（推送 `main` 自动部署，见 [`.github/workflows/deploy-pages.yml`](./.github/workflows/deploy-pages.yml)）：
+
+- 项目索引：https://xoplay.github.io/workbuddy/
+- Girls Puzzle：https://xoplay.github.io/workbuddy/girls-puzzle/
+
 ## girls-puzzle
 
 经典拼图：交换图块复原图片，含关卡线、收藏、商城、每日挑战。
@@ -29,6 +36,7 @@ npm run build    # 类型检查 + 生产构建到 dist/
 - **`src/config/assets.ts`**：`assetUrl()` 资源路径解析（原先被引用但文件缺失）
 - **加载屏降级**：主站共享库缺失时 3.5s 强制关闭遮罩，避免黑屏
 - **修复 3 处编译错误**：`canReadSync` / `removeFromGlobalCollection` 漏 import、`window.top` 空值
+- **修复子路径资源 404**：11 处 UI 图标硬编码 `/ui/*.svg`、加载屏 logo 硬编码 `/girls-puzzle.svg`，统一改走 `assetUrl()` / `%BASE_URL%`
 
 ### 已知边界
 
